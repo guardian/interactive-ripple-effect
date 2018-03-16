@@ -4,13 +4,13 @@ var pageUrl = window.location.href.split('#')[0];
 
 module.exports =  {
     init: function() {
-        this.setLinks('.texts-share', 'The text messages of Parkland');
+        this.setLinks('.ripple-share', 'The text messages of Parkland');
     },
 
     setLinks: function(parent, title) {
-        $(parent + ' .texts-share__button--twitter a').attr('href', this.getTwitterLink(title));
-        $(parent + ' .texts-share__button--facebook a').attr('href', this.getFacebookLink(title));
-        $(parent + ' .texts-share__button--email a').attr('href', this.getEmailLink(title));
+        $(parent + ' .ripple-share__button--twitter a').attr('href', this.getTwitterLink(title));
+        $(parent + ' .ripple-share__button--facebook a').attr('href', this.getFacebookLink(title));
+        $(parent + ' .ripple-share__button--email a').attr('href', this.getEmailLink(title));
     },
 
     getTwitterLink: function(title) {

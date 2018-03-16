@@ -25,16 +25,16 @@ module.exports =  {
     },
 
     setFirst: function() {
-        $('.texts-chat:eq(0)').addClass('is-next');
+        $('.ripple-chat:eq(0)').addClass('is-next');
     },
 
     checkChats: function() {
-        $('.texts-chat').each(function(index, value) {
+        $('.ripple-chat').each(function(index, value) {
             if (scrollTop > $(value).offset().top - ((height / 2))) {
                 if (!$(value).hasClass('has-shown')) {
                     $(value).addClass('has-shown');
                     $('.is-next').removeClass('is-next');
-                    $('.texts-chat:eq(' + (index + 1) + ')').addClass('is-next');
+                    $('.ripple-chat:eq(' + (index + 1) + ')').addClass('is-next');
                 }
             }
         }.bind(this));

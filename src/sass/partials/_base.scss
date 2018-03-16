@@ -1,8 +1,10 @@
-.texts {
+.ripple {
     overflow: hidden;
+    background-color: $c-black;
+    color: $c-white;
 }
 
-.texts-content {
+.ripple-content {
     position: relative;
     max-width: 620px;
 

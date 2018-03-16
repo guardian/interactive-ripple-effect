@@ -1,4 +1,4 @@
-.texts-share {
+.ripple-share {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -11,7 +11,7 @@
     }
 }
 
-.texts-share__button {
+.ripple-share__button {
     height:32px;
     width: 32px;
     border-radius: 20px;
@@ -35,8 +35,8 @@
     }
 }
 
-.texts--end {
-    .texts-share {
+.ripple--end {
+    .ripple-share {
         display: block;
     }
 }

@@ -1,11 +1,11 @@
-.texts-header {
+.ripple-header {
     position: relative;
     z-index: 6;
     margin: 0;
     padding: 6px 0;
 }
 
-.texts-header__title {
+.ripple-header__title {
     font-family: 'Guardian Egyptian Web';
     font-weight: 900;
     color: $c-black;
@@ -30,20 +30,20 @@
     }
 }
 
-span.texts-header__dot {
+span.ripple-header__dot {
     display: inline;
     animation: fade 0.9s linear infinite;
 }
 
-.texts-header__dot:nth-of-type(1) {
+.ripple-header__dot:nth-of-type(1) {
     animation-delay: -.6s;
 }
 
-.texts-header__dot:nth-of-type(2) {
+.ripple-header__dot:nth-of-type(2) {
     animation-delay: -.3s;
 }
 
-.texts-header__standfirst {
+.ripple-header__standfirst {
     font-family: 'Guardian Egyptian Web';
     font-size: 20px;
     line-height: 1.1;
@@ -59,7 +59,7 @@ span.texts-header__dot {
 
 }
 
-.texts-header__byline {
+.ripple-header__byline {
     position: relative;
     font-family: 'Guardian Egyptian Web';
     color: $c-red;
