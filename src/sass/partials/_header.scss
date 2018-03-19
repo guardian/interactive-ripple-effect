@@ -20,6 +20,7 @@
     font-size: 65px;
     line-height: 1;
     text-align: center;
+    margin: 0;
 
     @include mq(400px) {
         font-size: 100px;

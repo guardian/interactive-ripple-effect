@@ -47,19 +47,17 @@
 .ripple-intro__drop-cap {
     font-family: "Guardian Egyptian Web","Guardian Text Egyptian Web",Georgia,serif;
     color: $c-red;
-    font-weight: normal;
     float: left;
     display: inline-block;
     text-transform: uppercase;
-    font-weight: 200;
     box-sizing: border-box;
-    height: 5.2em;
+    height: 83px;
     padding-top: 3px;
     margin-right: 8px;
 }
 
 .ripple-intro__drop-cap-inner {
     font-weight: 700;
-    font-size: 6.6125rem;
-    line-height: 4.6875rem;
+    font-size: 106px;
+    line-height: 75px;
 }
