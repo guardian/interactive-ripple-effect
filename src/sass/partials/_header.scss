@@ -53,10 +53,10 @@
 .ripple-header__animation {
     position: absolute;
     z-index: 5;
-    top: -80px;
-    left: -60px;
-    right: -60px;
-    bottom: -40px;
+    top: -100px;
+    left: -80px;
+    right: -80px;
+    bottom: -60px;
 
     @include mq(400px) {
         top: -150px;
