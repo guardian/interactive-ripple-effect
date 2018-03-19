@@ -1,6 +1,6 @@
 var $ = require('../vendor/jquery.js');
 
-var scrollTop, position, windowHeight, height, activeSection, activePerson;
+var scrollTop, position, windowHeight, height, activeSection, activePerson, endOfSection;
 
 module.exports =  {
     init: function() {
@@ -47,6 +47,12 @@ module.exports =  {
                 activePerson = $(el).data('person');
             }
         }.bind(this));
+
+        endOfSection = false;
+
+        if (activeSection > 0 && scrollTop > $('.ripple-body--' + activeSection + ' .ripple-body__person--last').offset().top - (windowHeight / 4)) {
+            endOfSection = true;
+        }
     },
 
     checkPositionOfImages: function() {
@@ -60,8 +66,10 @@ module.exports =  {
     revealImages: function() {
         $('.is-shown').removeClass('is-shown');
 
-        for (var person = 0; activePerson >= person; person++) {
-            $('.ripple-images__image--' + activeSection + '-' + person).addClass('is-shown');
+        if (!endOfSection) {
+            for (var person = 0; activePerson >= person; person++) {
+                $('.ripple-images__image--' + activeSection + '-' + person).addClass('is-shown');
+            }
         }
     }
 };
