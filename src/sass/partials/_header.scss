@@ -1,7 +1,13 @@
 .ripple-header__content {
     position: relative;
-    max-width: 400px;
-    height: 400px;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+
+    @include mq(400px) {
+        height: 400px;
+        width: 400px;
+    }
 
     @include mq(desktop) {
         margin-left: 10px;
@@ -11,13 +17,12 @@
 .ripple-header__headline {
     font-family: 'Guardian Egyptian Web';
     font-weight: bold;
-    font-size: 24px;
-    line-height: 1.2;
+    font-size: 65px;
+    line-height: 1;
     text-align: center;
 
-    @include mq(desktop) {
+    @include mq(400px) {
         font-size: 100px;
-        line-height: 1;
     }
 }
 
@@ -34,7 +39,8 @@
     font-style: italic;
     color: $c-red;
     text-align: center;
-    padding: 0 80px;
+    max-width: 240px;
+    margin: 0 auto;
 
     a {
         font-weight: bold;
@@ -45,10 +51,17 @@
 
 .ripple-header__animation {
     position: absolute;
-    top: -150px;
-    left: -120px;
-    right: -120px;
-    bottom: -70px;
+    top: -80px;
+    left: -60px;
+    right: -60px;
+    bottom: -40px;
+
+    @include mq(400px) {
+        top: -150px;
+        left: -120px;
+        right: -120px;
+        bottom: -70px;
+    }
 }
 
 @keyframes ripple {
