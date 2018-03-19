@@ -9,15 +9,11 @@
     max-width: 620px;
 
     @include mq(leftCol) {
-        margin-left: 140px;
-    }
-
-    @include mq(wide) {
         margin-left: 220px;
     }
 
     &:before {
-        @include mq(desktop) {
+        @include mq(leftCol) {
             content: '';
             position: absolute;
             top: -12px;

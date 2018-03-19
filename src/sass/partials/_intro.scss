@@ -1,9 +1,20 @@
 .ripple-intro {
     .ripple-content {
+        padding-top: 20px;
+        padding-bottom: 120px;
+
+        @include mq(desktop) {
+            padding-top: 120px;
+            padding-left: 310px;
+        }
+
+        @include mq(leftCol) {
+            padding-left: 260px;
+            padding-top: 120px;
+        }
+
         @include mq(wide) {
             padding-left: 420px;
-            padding-top: 120px;
-            padding-bottom: 120px;
         }
     }
 }
