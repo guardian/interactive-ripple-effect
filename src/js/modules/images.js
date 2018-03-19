@@ -1,16 +1,23 @@
 var $ = require('../vendor/jquery.js');
 
-var scrollTop, position, windowHeight, height;
+var scrollTop, position, windowHeight, height, activeSection, activePerson;
 
 module.exports =  {
     init: function() {
         this.setValues(true);
         this.bindings();
+        this.checkPositionOfImages();
     },
 
     bindings: function() {
         $(window).scroll(function() {
             this.setValues();
+            this.checkPositionOfImages();
+            this.revealImages();
+        }.bind(this));
+
+        $(window).resize(function() {
+            this.setValues(true);
             this.checkPositionOfImages();
         }.bind(this));
     },
@@ -24,6 +31,22 @@ module.exports =  {
             height = $('.ripple-images').height();
             windowHeight = $(window).height();
         }
+
+        activeSection = 0;
+
+        $('.ripple-body__inner').each(function(i, el) {
+            if (scrollTop > $(el).offset().top - (windowHeight / 2)) {
+                activeSection = $(el).data('section');
+            }
+        }.bind(this));
+
+        activePerson = 0;
+
+        $('.ripple-body__person').each(function(i, el) {
+            if (scrollTop > $(el).offset().top - (windowHeight / 2)) {
+                activePerson = $(el).data('person');
+            }
+        }.bind(this));
     },
 
     checkPositionOfImages: function() {
@@ -31,6 +54,14 @@ module.exports =  {
             $('.ripple-images').addClass('is-fixed');
         } else {
             $('.ripple-images').removeClass('is-fixed');
+        }
+    },
+
+    revealImages: function() {
+        $('.is-shown').removeClass('is-shown');
+
+        for (var person = 0; activePerson >= person; person++) {
+            $('.ripple-images__image--' + activeSection + '-' + person).addClass('is-shown');
         }
     }
 };
