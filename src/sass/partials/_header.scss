@@ -2,6 +2,10 @@
     position: relative;
     max-width: 400px;
     height: 400px;
+
+    @include mq(desktop) {
+        margin-left: 10px;
+    }
 }
 
 .ripple-header__headline {
@@ -41,9 +45,9 @@
 
 .ripple-header__animation {
     position: absolute;
-    top: -110px;
-    left: -80px;
-    right: -80px;
+    top: -150px;
+    left: -120px;
+    right: -120px;
     bottom: -70px;
 }
 
