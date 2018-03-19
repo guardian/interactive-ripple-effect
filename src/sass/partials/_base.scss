@@ -16,11 +16,11 @@
         @include mq(leftCol) {
             content: '';
             position: absolute;
-            top: -12px;
+            top: 0;
             bottom: -12px;
             left: -10px;
             width: 1px;
-            background-color: $c-grey;
+            background-color: mix($c-black, $c-white, 90%);
         }
     }
 }
